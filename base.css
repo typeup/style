@@ -20,6 +20,7 @@ header > h1 {
 }
 code {
 	font: var(--font-monospace, monospace);
+	tab-size: 2;
 }
 math {
 	display: block;

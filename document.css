@@ -1,6 +1,7 @@
 @import url("base.css");
 @import url("screen.css") screen;
 @import url("document-print.css") print;
+
 body > h1:before {
 	counter-increment: h1;
 	content: counter(h1);

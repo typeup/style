@@ -3,7 +3,7 @@
 	size: A4;
 	margin: 60mm 40mm 37mm 50mm;
 	@top-left {
-		content:var(--logotype-top);
+		content: var(--logotype-top);
 		margin: 25mm 0 0 -14mm;
 		vertical-align: top;
 	}

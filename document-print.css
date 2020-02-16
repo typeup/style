@@ -14,7 +14,7 @@
 		margin: 0 0 0 0;
 	}
 	@top-center {
-		content:var(--logotype-10);
+		content:var(--logotype-front);
 		vertical-align: bottom;
 	}
 	@bottom-center {

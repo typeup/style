@@ -3,7 +3,7 @@ body {
 	margin: 40px 4cm 0 8cm;
 }
 header:before {
-	content:var(--logotype-front);
+	content: var(--logotype-front);
 	position: fixed;
 	left: 0;
 	top: 0;

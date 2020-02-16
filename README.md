@@ -1,2 +1,2 @@
 # style
-Common files for the PayFunc Visual Identity.
+Basic style sheets for TypeUp.

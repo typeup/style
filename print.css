@@ -1,0 +1,107 @@
+@media print {
+@page {
+	size: A4;
+	margin: 60mm 40mm 37mm 50mm;
+	@top-left {
+		content:var(--logotype-top);
+		margin: 25mm 0 0 -14mm;
+		vertical-align: top;
+	}
+	@top-right-corner {
+		font-family: "PT Sans", "Verdana", sans-serif;
+		font-weight: normal;
+		font-size: 8pt;
+		text-align: right;
+		vertical-align: top;
+		margin: 25mm 10mm 0mm 0mm;
+		white-space: pre;
+		content: string(identification) "\a" string(date) "\a" string(author) "\a\a" string(classification);
+	}
+	@bottom-right-corner {
+		font-family: "PT Sans", "Verdana", sans-serif;
+		font-weight: normal;
+		font-size: 8pt;
+		text-align: center;
+		vertical-align: top;
+		content: counter(page) " of " counter(pages);
+	}
+}
+body {
+	margin: 0 0 0 0;
+	max-width: none;
+}
+header {
+	margin: 10mm 0 0 0;
+	font-size: 20pt;
+	text-align: center;
+	width: 100%;
+}
+header:after {
+	font-family: "PT Sans", "Verdana", sans-serif;
+	font-weight: normal;
+	font-size: 14pt;
+	display: block;
+	padding: 1cm 0 0 0;
+	margin: 0 0 0 0;
+	content: string(author);
+}
+h1, h2, h3, h4, h5, h6, h7 {
+	page-break-after: avoid;
+}
+figure, table {
+	page-break-inside: avoid;
+}
+ul, ol, li {
+	page-break-before: avoid;
+	page-break-inside: avoid;
+}
+meta[name="author"] {
+	string-set: author attr(content);
+}
+meta[name="date"] {
+	string-set: date attr(content);
+}
+meta[name="identification"] {
+	string-set: identification attr(content);
+}
+meta[name="classification"] {
+	string-set: classification attr(content);
+}
+a[href^="http"] {
+	color: inherit;
+	text-decoration: inherit;
+}
+span.footnote,
+a[href^="http"]:after {
+	float: footnote;
+	font: 10pt "PT Serif", "Garamond", "Georgia", serif;
+	font-weight: normal;
+	text-indent: 0;
+}
+a[href^="http"]:after {
+	content: attr(href);
+}
+span.footnote::footnote-marker,
+a[href^="http"]:after::footnote-marker {
+	margin-right: 0.5em;
+}
+span.footnote::footnote-call,
+a[href^="http"]:after::footnote-call {
+	font-size: 60%;
+	vertical-align: super;
+	line-height: none;
+}
+nav li > a:after {
+	content: leader('.') target-counter(attr(href), page)
+}
+aside {
+	display: inline;
+	float: right;
+	clear: right;
+	margin-right: -35mm;
+	margin-bottom: 1em;
+	width: 30mm;
+	text-align: left;
+	page-break-inside: avoid;
+}
+}

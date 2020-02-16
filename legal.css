@@ -1,0 +1,40 @@
+@import url("page.css");
+h4 {
+	margin: 0 0 4pt 2em;
+}
+h4 + p {
+	text-align: right;
+	margin: -22px 2em 4pt 0;
+}
+
+*:not(nav):not(header) > h1:before {
+	content: counter(h1);
+	float: left;
+	margin-left: -30pt;
+}
+*:not(nav):not(header) > h1 {
+	counter-reset: p;
+	counter-increment: h1;
+}
+h1 ~ p:before {
+	counter-increment: p;
+	content: counter(h1) "." counter(p);
+	float: left;
+	margin-left: -30pt;
+}
+
+section.section {
+	margin-top: 2em;
+	float: left;
+	width: 49%;
+}
+section.section > p {
+	margin-bottom: 2cm;
+}
+
+@media print {
+	@page:first {
+		size: A4;
+		margin: 40mm 40mm 37mm 50mm;
+	}
+}

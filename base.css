@@ -1,0 +1,224 @@
+html {
+	font: var(--font-default, serif);
+	text-align: justify;
+	line-height: 120%;
+}
+body {
+	counter-reset: h1 h2 h3 h4 table figure;
+	max-width: 18cm;
+}
+header, h1, h2, h3, h4, h5, h6, nav {
+	font-family: var(--font-caption, sans-serif);
+	font-weight: normal;
+	page-break-after: avoid;
+}
+header > h1 {
+	font-size: 18pt;
+	padding: 40px 0 40px 0;
+	position: relative;
+	string-set: title content()
+}
+code {
+	font: var(--font-monospace, monospace);
+}
+math {
+	display: block;
+	margin: 0.5ex 0 0.5ex 12%;
+	line-height: 2em;
+	text-align: left;
+}
+p {
+	margin: 0;
+}
+p + p {
+	text-indent: 3mm;
+}
+
+ol, ul {
+	padding: 0 0 0 12mm;
+	margin: 2pt 0 8pt 0;
+	text-align: left;
+}
+ul > ul {
+	margin: 0 0 0 0;
+}
+ol {
+	counter-reset: li;
+}
+li {
+	list-style: none;
+	position: relative;
+}
+ol > li:before {
+	counter-increment: li;
+	content: counter(li) ".";
+	position: absolute;
+	left: -6mm;
+}
+ul > li:before {
+	content: "•";
+	position: absolute;
+	left: -6mm;
+}
+dl {
+	padding: 0 0 0 6mm;
+	margin: 2pt 0 8pt 0;
+	text-align: left;
+}
+dl > dt {
+	font-weight: bold;
+}
+dl > dt > code {
+	font-weight: normal;
+}
+dl > dd {
+  padding: 0 0 0 6mm;
+  margin: 0;
+}
+nav > h1 {
+  content: "Table of Contents";
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav > ol {
+  counter-reset: chapter;
+  padding: 0 0 0 8mm;
+}
+nav > li {
+  margin: 1mm 0 1mm 0;
+}
+nav > ol > li > ol {
+  padding: 0 0 0 6mm;
+}
+nav > ol > li:before {
+	counter-reset: section;
+	counter-increment: chapter;
+	content: counter(chapter);
+	position: absolute;
+	left: -2em;
+	text-align: right;
+	width: 1.6em;
+}
+nav > ol > li > ol > li:before {
+	counter-increment: section;
+	content: counter(chapter) "." counter(section);
+	position: absolute;
+	left: -3em;
+	text-align: right;
+	width: 2.6em;
+}
+
+table {
+	margin: 16pt auto 12pt auto;
+	min-width: 80%;
+	max-width: 100%;
+	text-align: left;
+	page-break-inside:avoid;
+	border-collapse: collapse;
+}
+table > thead > tr > th {
+	font-weight: bold;
+	border-bottom: 1pt solid black;
+	padding: 0pt 4pt;
+	margin: 0;
+}
+table tr > td,
+table tr > th {
+	padding: 1pt 4pt;
+	margin: 0;
+}
+table tbody tr.separator {
+	border-bottom: 1pt solid black;
+}
+table > caption:not(:empty):before {
+	font-weight: bold;
+	counter-increment: table;
+	content: "Table " counter(table) ": ";
+}
+p > a.table-ref:before {
+	content: "Table " target-counter(attr(href), table);
+}
+figure {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 0 0 0;
+}
+figure > svg {
+	margin: 0 auto;
+}
+figure + figure,
+p + figure,
+figure + p {
+	padding-top: 1em;
+}
+figure > img {
+	display: block;
+	max-height: 15em;
+	max-width: 100%;
+	margin: 0 auto 0 auto;
+}
+table > caption,
+figure > figcaption {
+	font-style: italic;
+	caption-side: bottom;
+	text-align: justify;
+	max-width: 100%;
+	margin: 6pt auto 12pt auto;
+}
+figure > img ~ figcaption:not(:empty):before {
+	font-weight: bold;
+	counter-increment: figure;
+	content: "Figure " counter(figure) ": ";
+}
+figure > math ~ figcaption:not(:empty):before {
+	font-weight: bold;
+	counter-increment: equation;
+	content: "Equation " counter(equation) ": ";
+}
+p > a.fig-ref::before {
+	content: "Figure " target-counter(attr(href), figure);
+}
+p > a.table-ref::before {
+	content: "Table " target-counter(attr(href), table);
+}
+ol.references {
+	list-style-type: none;
+	margin-left: 0;
+	counter-reset: reference;
+}
+ol.references > li {
+	counter-increment: reference;
+	margin-top:5px;
+}
+ol.references > li:before {
+	content: counter(reference) ".";
+}
+p > a.ref {
+	content: "[" target-counter(attr(href), reference) "]";
+}
+.tr1 td:nth-child(1), .tr1 th:nth-child(1),
+.tr2 td:nth-child(2), .tr2 th:nth-child(2),
+.tr3 td:nth-child(3), .tr3 th:nth-child(3),
+.tr4 td:nth-child(4), .tr4 th:nth-child(4),
+.tr5 td:nth-child(5), .tr5 th:nth-child(5),
+.tr6 td:nth-child(6), .tr6 th:nth-child(6),
+.tr7 td:nth-child(7), .tr7 th:nth-child(7),
+.tr8 td:nth-child(8), .tr8 th:nth-child(8),
+.tr9 td:nth-child(9), .tr9 th:nth-child(9) {
+	text-align: right;
+}
+
+.tc1 td:nth-child(1), .tc1 th:nth-child(1),
+.tc2 td:nth-child(2), .tc2 th:nth-child(2),
+.tc3 td:nth-child(3), .tc3 th:nth-child(3),
+.tc4 td:nth-child(4), .tc4 th:nth-child(4),
+.tc5 td:nth-child(5), .tc5 th:nth-child(5),
+.tc6 td:nth-child(6), .tc6 th:nth-child(6),
+.tc7 td:nth-child(7), .tc7 th:nth-child(7),
+.tc8 td:nth-child(8), .tc8 th:nth-child(8),
+.tc9 td:nth-child(9), .tc9 th:nth-child(9) {
+	text-align: center;
+}

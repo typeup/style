@@ -1,0 +1,61 @@
+@media screen {
+body {
+	margin: 40px 4cm 0 8cm;
+}
+header:before {
+	content:var(--logotype-front);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 8cm;
+	text-align: center;
+	padding: 2cm 0 2cm 0;
+}
+nav {
+	position: fixed;
+	left: 1cm;
+	width: 6cm;
+	margin-top: 3cm;
+	text-align: center;
+	padding: 2cm 0 2cm 0;
+	font-size: 9pt;
+}
+nav > h1 {
+  display: none;
+}
+nav li > a:hover {
+	text-decoration: underline;
+}
+body:after {
+	position: fixed;
+	height: 100px;
+	width:100%;
+	top: 100%;
+	left: 0cm;
+	width: 8cm;
+	margin-top:-30px;
+	text-align: center;
+	padding:5px;
+	font-family:"PT Sans", "Verdana", sans-serif;
+	font-weight: normal;
+	font-size: 10px;
+	content: "© Cogneco AB";
+}
+span.footnote:before {
+	content: " (";
+}
+span.footnote:after {
+	content: ") ";
+}
+
+aside {
+	display: inline;
+ 	float: right;
+	clear: right;
+	margin-right: -41%;
+	margin-bottom: 1em;
+	width: 37%;
+	text-align: left;
+	page-break-inside: avoid;
+}
+}

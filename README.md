@@ -1,2 +1,2 @@
 # style
-Generic style templates to use.
+Common files for the PayFunc Visual Identity.

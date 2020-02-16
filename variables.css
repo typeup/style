@@ -1,0 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans:400,400italic,700|PT+Serif:400,400italic,700|PT+Sans+Caption&subset=latin,latin-ext);
+:root {
+	--logotype-front: url("front.svg");
+	--logotype-top: url("top.svg");
+	--font-default: 10pt "Garamond", "Georgia", serif;
+	--font-caption: "Verdana", sans-serif;
+	--font-monospace: "Lucida Console", Monaco, monospace;
+}

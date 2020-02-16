@@ -1,0 +1,14 @@
+@import url("print.css");
+header {
+	margin: 0;
+	padding: 0 0 1cm 0;
+}
+header > h1 {
+	margin: 0;
+	padding: 0;
+}
+header:after {
+	content: none;
+	margin: 0;
+	padding: 0;
+}

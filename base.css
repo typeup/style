@@ -25,9 +25,9 @@ code {
 }
 math {
 	display: block;
-	margin: 0.5ex 0 0.5ex 12%;
+	margin: 0.5ex 0 0.5ex 0;
 	line-height: 2em;
-	text-align: left;
+	text-align: center;
 }
 p {
 	margin: 0;

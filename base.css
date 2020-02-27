@@ -113,6 +113,7 @@ nav > ol > li > ol > li:before {
 }
 
 table {
+	display: block;
 	margin: 16pt auto 12pt auto;
 	width: 100%;
 	text-align: left;
@@ -120,6 +121,7 @@ table {
 	border-collapse: collapse;
 }
 table tbody {
+	display: table;
 	min-width: 80%;
 	max-width: 100%;
 }

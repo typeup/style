@@ -17,7 +17,7 @@ h4 + p {
 	counter-reset: p;
 	counter-increment: h1;
 }
-:not(section) > h1 ~ p:before {
+h1 ~ p:before:not(:empty) {
 	counter-increment: p;
 	content: counter(h1) "." counter(p);
 	float: left;

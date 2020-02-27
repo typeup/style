@@ -114,11 +114,14 @@ nav > ol > li > ol > li:before {
 
 table {
 	margin: 16pt auto 12pt auto;
-	min-width: 80%;
-	max-width: 100%;
+	width: 100%;
 	text-align: left;
 	page-break-inside:avoid;
 	border-collapse: collapse;
+}
+table tbody {
+	min-width: 80%;
+	max-width: 100%;
 }
 table > thead > tr > th {
 	font-weight: bold;

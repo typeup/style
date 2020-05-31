@@ -4,7 +4,7 @@ html {
 	line-height: 120%;
 }
 body {
-	counter-reset: h1 h2 h3 h4 table figure;
+	counter-reset: h1 h2 h3 h4 table figure equation;
 	max-width: 18cm;
 }
 header, h1, h2, h3, h4, h5, h6, nav {

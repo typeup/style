@@ -169,7 +169,7 @@ figure > figcaption {
 	max-width: 100%;
 	margin: 6pt auto 12pt auto;
 }
-figure > img ~ figcaption:not(:empty):before {
+figure > :not(math) ~ figcaption:not(:empty):before {
 	font-weight: bold;
 	counter-increment: figure;
 	content: "Figure " counter(figure) ": ";

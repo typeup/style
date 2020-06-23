@@ -149,6 +149,7 @@ figure {
 }
 figure > svg {
 	margin: 0 auto;
+	max-width: 100%;
 }
 figure + figure,
 p + figure,

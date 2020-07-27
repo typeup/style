@@ -23,7 +23,8 @@ code {
 	font: var(--font-monospace, monospace);
 	tab-size: 2;
 }
-math {
+math,
+.mjx-chtml {
 	display: inline-block;
 	margin: 0.5ex 0 0.5ex 0;
 	line-height: 2em;
@@ -175,7 +176,8 @@ figure > :not(math) ~ figcaption:not(:empty):before {
 	counter-increment: figure;
 	content: "Figure " counter(figure) ": ";
 }
-figure > math ~ figcaption:not(:empty):before {
+figure > math ~ figcaption:not(:empty):before,
+figure > .mjx-chtml ~ figcaption:not(:empty):before {
 	font-weight: bold;
 	counter-increment: equation;
 	content: "Equation " counter(equation) ": ";

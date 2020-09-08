@@ -2,7 +2,6 @@ html {
 	font: var(--font-default, serif);
 	text-align: justify;
 	line-height: 120%;
-	widows: 8;
 }
 body {
 	counter-reset: h1 h2 h3 h4 table figure equation;
@@ -32,6 +31,8 @@ math,
 }
 p {
 	margin: 0;
+	orphans: 5;
+	widows: 5;
 }
 p + p {
 	text-indent: 3mm;

@@ -2,6 +2,7 @@ html {
 	font: var(--font-default, serif);
 	text-align: justify;
 	line-height: 120%;
+	widows: 8;
 }
 body {
 	counter-reset: h1 h2 h3 h4 table figure equation;

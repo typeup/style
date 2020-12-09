@@ -12,8 +12,8 @@ body > h1 {
 	counter-reset: h2 h3 h4;
 }
 h1 {
-	font-size: 14pt;
-	margin: 46pt 0 28pt 0;
+	font-size: 110%;
+	margin: 36pt 0 28pt 0;
 }
 body > h2:before {
 	counter-increment: h2;

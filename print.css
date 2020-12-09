@@ -1,4 +1,13 @@
 @media print {
+:root, [lang="en"] {
+	--page-count: counter(page) " of " counter(pages);
+}
+[lang="sv"] {
+	--page-count: counter(page) " av " counter(pages);
+}
+[lang="de"] {
+	--page-count: counter(page) " von " counter(pages);
+}
 @page {
 	size: A4;
 	margin: 60mm 40mm 37mm 50mm;
@@ -23,7 +32,7 @@
 		font-size: 8pt;
 		text-align: center;
 		vertical-align: top;
-		content: counter(page) " of " counter(pages);
+		content: var(--page-count);
 	}
 }
 body {
@@ -31,15 +40,14 @@ body {
 	max-width: none;
 }
 header {
-	margin: 10mm 0 0 0;
-	font-size: 20pt;
+	font-size: 140%;
 	text-align: center;
 	width: 100%;
 }
 header:after {
 	font-family: "PT Sans", "Verdana", sans-serif;
 	font-weight: normal;
-	font-size: 14pt;
+	font-size: 120%;
 	display: block;
 	padding: 1cm 0 0 0;
 	margin: 0 0 0 0;

@@ -14,8 +14,6 @@ header, h1, h2, h3, h4, h5, h6, nav {
 	page-break-after: avoid;
 }
 header > h1 {
-	font-size: 18pt;
-	padding: 40px 0 40px 0;
 	position: relative;
 	string-set: title content()
 }

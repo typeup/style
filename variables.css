@@ -2,7 +2,7 @@
 :root {
 	--logotype-front: url("front.svg");
 	--logotype-top: url("top.svg");
-	--font-default: 10pt "Garamond", "Georgia", serif;
+	--font-default: 8pt "Garamond", "Georgia", serif;
 	--font-caption: "Verdana", sans-serif;
 	--font-monospace: "Lucida Console", Monaco, monospace;
 }

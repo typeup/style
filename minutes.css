@@ -1,8 +1,7 @@
 @import url("page.css");
 
 body > h1 {
-	position: relative;
-	left: -2.6em;
+	text-indent: -2.6em;
 }
 body > h1::before {
 	float: left;

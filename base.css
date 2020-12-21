@@ -8,7 +8,7 @@ body {
 	max-width: 18cm;
 }
 header, h1, h2, h3, h4, h5, h6, nav {
-	text-align: right;
+	text-align: left;
 	font-family: var(--font-caption, sans-serif);
 	font-weight: normal;
 	line-height: 100%;

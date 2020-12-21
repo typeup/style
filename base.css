@@ -11,7 +11,7 @@ header, h1, h2, h3, h4, h5, h6, nav {
 	text-align: left;
 	font-family: var(--font-caption, sans-serif);
 	font-weight: normal;
-	line-height: 100%;
+	line-height: 110%;
 	page-break-after: avoid;
 }
 header > h1 {

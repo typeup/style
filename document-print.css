@@ -18,10 +18,11 @@
 		vertical-align: bottom;
 	}
 	@bottom-center {
-		font-family: "PT Sans", "Verdana", sans-serif;
+		font-family: var(--font-caption, sans-serif);
 		font-weight: normal;
 		font-size: 14pt;
 		white-space: pre;
+		line-height: 120\%;
 		content: string(identification) "\a" string(date);
 	}
 }

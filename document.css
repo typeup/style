@@ -2,7 +2,7 @@
 @import url("screen.css") screen;
 @import url("document-print.css") print;
 
-*:not(nav):not(header) {
+*:not(nav):not(header) h1 {
 	font-size: 140%;
 	margin: .9em 0 .4em 0;
 	counter-reset: h2 h3 h4;

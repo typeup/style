@@ -1,6 +1,6 @@
 @import url("print.css");
 @page:first {
-	margin: 140mm 0 60mm 0;
+	margin: 110mm 0 60mm 0;
 	@top-left {
 		content: "";
 		margin: 0 0 0 0;
@@ -36,7 +36,7 @@ header {
 }
 header > h1 {
 	 text-align: center;
-	 padding: 2cm;
+	 padding: 0 2cm;
 }
 header:after {
 	font-size: 18pt;

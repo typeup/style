@@ -22,8 +22,8 @@
 		font-weight: normal;
 		font-size: 14pt;
 		white-space: pre;
-		line-height: 150\%;
-		content: string(identification) "\a" string(date);
+		line-height: 100\%;
+		content: string(identification) "\a\a" string(date);
 	}
 }
 header {

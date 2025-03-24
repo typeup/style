@@ -1,3 +1,4 @@
+@import url("translation.css");
 html {
 	font: var(--font-default, serif);
 	text-align: justify;

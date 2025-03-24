@@ -80,7 +80,7 @@ dl > dd {
   margin: 0;
 }
 nav > h1 {
-  content: "Table of Contents";
+	content: var(--translation-table-of-contents, "Table of Contents");
 }
 nav a {
   text-decoration: none;
@@ -138,10 +138,10 @@ table tbody tr.separator {
 table > caption:not(:empty):before {
 	font-weight: bold;
 	counter-increment: table;
-	content: "Table " counter(table) ": ";
+	content: var(--translation-table, "Table") " " counter(table) ": ";
 }
 p > a.table-ref:before {
-	content: "Table " target-counter(attr(href), table);
+	content: var(--translation-table, "Table") " " target-counter(attr(href), table);
 }
 figure {
 	display: block;
@@ -176,19 +176,19 @@ figure > figcaption {
 figure > :not(math) ~ figcaption:not(:empty):before {
 	font-weight: bold;
 	counter-increment: figure;
-	content: "Figure " counter(figure) ": ";
+	content:   var(--translation-figure, "Figure") " " counter(figure) ": ";
 }
 figure > math ~ figcaption:not(:empty):before,
 figure > .mjx-chtml ~ figcaption:not(:empty):before {
 	font-weight: bold;
 	counter-increment: equation;
-	content: "Equation " counter(equation) ": ";
+	content:  var(--translation-equation, "Equation") " " counter(equation) ": ";
 }
 p > a.fig-ref::before {
-	content: "Figure " target-counter(attr(href), figure);
+	content:  var(--translation-figure, "Figure") " " target-counter(attr(href), figure);
 }
 p > a.table-ref::before {
-	content: "Table " target-counter(attr(href), table);
+	content:  var(--translation-table, "Table") " " target-counter(attr(href), table);
 }
 ol.references {
 	list-style-type: none;

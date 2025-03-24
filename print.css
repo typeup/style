@@ -1,12 +1,6 @@
 @media print {
-:root, [lang="en"] {
-	--page-count: counter(page) " of " counter(pages);
-}
-[lang="sv"] {
-	--page-count: counter(page) " av " counter(pages);
-}
-[lang="de"] {
-	--page-count: counter(page) " von " counter(pages);
+:root {
+	--page-count: counter(page) " "  var(--translation-of, "of") " " counter(pages);
 }
 @page {
 	size: A4;

@@ -29,7 +29,7 @@
 		font-weight: normal;
 		font-size: 8pt;
 		text-align: center;
-		content: counter(page) " of " counter(pages);
+		content: counter(page) " "  var(--translation-of, "of") " " counter(pages);
 	}
 }
 header {

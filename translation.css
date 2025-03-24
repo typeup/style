@@ -1,0 +1,24 @@
+[lang="en"] {
+    --translation-abstract: "Abstract";
+    --translation-equation: "Equation";
+    --translation-figure: "Figure";
+    --translation-of: "of";
+    --translation-table: "Table";
+	--translation-table-of-contents: "Table of Contents";
+}
+[lang="sv"] {
+    --translation-abstract: "Sammanfattning";
+    --translation-equation: "Ekvation";
+    --translation-figure: "Diagram";
+    --translation-of: "av";
+    --translation-table: "Tabell";
+	--translation-table-of-contents: "Innehållsförteckning";
+}
+[lang="de"] {
+    --translation-abstract: "Zusammenfassung";
+    --translation-equation: "Equation";
+    --translation-figure: "Abbildung";
+    --translation-of: "von";
+    --translation-table: "Tabelle";
+	--translation-table-of-contents: "Inhaltsverzeichnis";
+}

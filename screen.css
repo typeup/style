@@ -39,7 +39,7 @@ body:after {
 	font-family:"PT Sans", "Verdana", sans-serif;
 	font-weight: normal;
 	font-size: 10px;
-	content: "© Cogneco AB";
+	content: var(--copyright);
 }
 span.footnote:before {
 	content: " (";

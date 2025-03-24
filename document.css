@@ -46,7 +46,7 @@ h5 {
 	margin: .6em 0 .3em 0;
 }
 #abstract:before {
-	content: "Abstract\A";
+	content: var(--translation-abstract, "Abstract") "\A";
 	white-space: pre;
 	width: 100%;
 	font-family: var(--font-caption, sans-serif);
